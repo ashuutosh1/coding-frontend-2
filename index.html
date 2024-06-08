@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="w-full bg-black">
+    <!-- Navigation bar -->
+    <nav class=" w-full bg-black shadow-lg shadow-blue-300/50 p-2 fixed z-20">
+        <div id="nav-container" class="flex flex-row justify-center items-center">
+            <div class="container flex justify-center flex-1 max-lg:justify-start max-lg:pl-5 overflow-hidden">
+                <img src="./assets/logoweb1.gif" class=" w-auto lg:h-16 h-10">
+            </div>
+
+            <div
+                class="hidden lg:flex gap-6 items-center justify-center font-medium text-white text-base flex-1 shrink-0">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Courses</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Content</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Tutorials</a></li>
+                </ul>
+
+            </div>
+
+            <div class="hidden lg:flex flex-1 justify-center items-center">
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-3xl px-6 py-3 ">Get
+                    Started</button>
+            </div>
+
+            <div class="lg:hidden flex flex-1 justify-end items-center">
+                <button class="text-white mr-4 text-3xl" onclick="handleNav()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+
+        <div id="nav-bar" class="hidden lg:hidden flex-col z-10 fixed inset-0">
+            <div class="flex flex-row justify-center p-2 bg-black">
+                <div class="container flex justify-center flex-1 max-lg:justify-start max-lg:pl-5">
+                    <img src="./assets/logoweb1.gif" class="object-cover w-auto h-16">
+                </div>
+
+                <div class="lg:hidden flex flex-1 justify-end">
+                    <button class="text-white mr-4 text-3xl" onclick="handleNav()"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col gap-5 items-center py-20 bg-black text-white bg-opacity-90 backdrop-blur-sm font-semibold text-xl">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Courses</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">DevChallenge</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">FruitBox Flex</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Quick Compiler</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Core Subjects</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Context</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Article</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Tutorials</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <div id="hero-container" class="flex flex-col xl:flex-row lg:mx-20 pt-20 max-xl:text-center ">
+            <div id="left-hero-con" class="flex flex-col flex-1 p-20 gap-4 max-xl:items-center justify-center">
+                <h1 class=" text-gray-50 font-semibold text-5xl font-inter leading-snug ">Crack the Code to
+                    Success
+                    with
+                    @ashutos.h1</h1>
+                <p class=" text-gray-500 text-base font-normal leading-medium sm:max-w-[500px] font-inter">Elevate your
+                    programming skills, solve challenges, and unlock the world of coding possibilities.</p>
+                <div class="flex flex-col md:flex-row gap-5">
+                    <button class="bg-indigo-400 px-4 py-3 rounded-3xl text-white font-inter font-semibold">View
+                        Courses</button>
+                    <button
+                        class="border border-red-500 text-white font-inter font-semibold rounded-3xl px-4 py-3 hover:bg-gray-800 bg-opacity-20">Join
+                        Us
+                        <span class="text-red-500 px-4">Link<i class="fa-solid fa-arrow-right pl-2"></i></span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="right-hero-con" class="hidden xl:flex flex-1 mt-10">
+                <div id="inner-right-hero-con" class="grid grid-cols-2 gap-5 p-5 ">
+
+                    <div class="flex flex-col bg-gradient-to-b from-gray-900 via-black to-indigo-950 rounded-2xl p-4">
+                        <div
+                            class="flex flex-col flex-1 font-normal text-sm font-inter text-white gap-2 overflow-auto custom-scrollbar">
+                            <span class="border border-white px-5 rounded-2xl py-2">Operating System</span>
+                            <span class="border border-white px-5 rounded-2xl py-2">Compiler Design</span>
+                            <span class="border border-white px-5 rounded-2xl py-2">OOPs</span>
+                            <span class="border border-white px-5 rounded-2xl py-2">Low Level Programming</span>
+                        </div>
+                        <div class="flex flex-col flex-1 justify-center  text-white font-inter">
+                            <span class="font-semibold">Core subjects</span>
+                            <p class="text-gray-500">Demystify CS topics with our easy-to-understand guides.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col bg-gradient-to-b from-gray-900 via-black to-indigo-950  rounded-2xl p-4">
+
+                        <div class="flex flex-col flex-1">
+                            <div
+                                class="flex flex-row font-normal text-sm font-inter text-white mx-2 gap-3 p-2 items-center justify-center border-b">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Search a Challenges..."
+                                    class="bg-transparent focus:outline-none focus:ring-0">
+                            </div>
+                            <div
+                                class="flex flex-col text-white mx-2 mt-2 gap-2 font-inter text-xs max-h-20 overflow-auto custom-scrollbar2">
+                                <span class="underline">Begineer</span>
+                                <span class="text-gray-400">HTML</span>
+                                <span class="text-gray-400">CSS</span>
+                                <span class="text-gray-400">JavaScript</span>
+                                <span class="underline">Advance</span>
+                                <span class="text-gray-400">React</span>
+                                <span class="text-gray-400">NextJS</span>
+                            </div>
+
+                        </div>
+                        <div class="flex flex-col flex-1 justify-center  text-white font-inter">
+                            <span class="font-semibold">DevChallenge</span>
+                            <p class="text-gray-500">Complete Challenges and upscale your Skills</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col bg-gradient-to-b from-gray-900 via-black to-indigo-950 rounded-2xl p-4">
+                        <div class="flex flex-col flex-1 overflow-hidden min-h-40 items-center">
+                            <img src="./assets/compilerDraw3.svg" class="opacity-50">
+                        </div>
+                        <div class="flex flex-col flex-1 justify-center  text-white font-inter">
+                            <span class="font-semibold">Quick Compiler</span>
+                            <p class="text-gray-500">Write and run code in multiple languages from anywhere.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col bg-gradient-to-b from-gray-900 via-black to-indigo-950 rounded-2xl p-4">
+                        <div class="flex flex-col flex-1 px-10 py-5">
+
+                            <div
+                                class="flex border border-white w-full h-full rounded-full bg-gradient-to-b from-gray-900 via-black to-indigo-950">
+                            </div>
+
+                        </div>
+                        <div class="flex flex-col flex-1 justify-center  text-white font-inter">
+                            <span class="font-semibold">Articles</span>
+                            <p class="text-gray-500 text-sm">Dive Deep into Tech Innovation with Our Engaging Blogs &
+                                Articles.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Company Stats -->
+
+        <div
+            class="relative mx-20 lg:mt-20 mt-10 bg-black rounded-lg overflow-hidden glow-effect text-white lg:gap-20 gap-10 lg:p-20 p-2 flex flex-row flex-wrap">
+            <div class="glow-border"></div>
+            <div class="flex flex-col flex-1 font-inter  items-center border border-gray-600 rounded-lg p-5 gap-1">
+                <span class="text-2xl font-semibold">1 M+</span>
+                <span>Subscriber on Youtube</span>
+            </div>
+            <div class="flex flex-col flex-1 font-inter items-center border border-gray-600 rounded-lg p-5 gap-1">
+                <span class="text-2xl font-semibold">6 K+</span>
+                <span>Follower on Twitter</span>
+            </div>
+            <div class="flex flex-col flex-1 font-inter items-center border border-gray-600 rounded-lg p-5 gap-1">
+                <span class="text-2xl font-semibold">135 K+</span>
+                <span>Follower on Instagram</span>
+            </div>
+            <div class="flex flex-col flex-1 font-inter  items-center border border-gray-600 rounded-lg p-5 gap-1">
+                <span class="text-2xl font-semibold">250 K+</span>
+                <span>Subscriber on LinkedIn</span>
+            </div>
+        </div>
+
+
+        <!-- Feature Container 1 -->
+
+        <div id="feature1"
+            class="lg:mt-20 mt-10 xl:mx-40 max-xl:mx-10  md:flex-row flex-col flex gap-10 lg:p-12 p-6 hover:border max-2xl:border border-orange-600 rounded-3xl">
+            <!-- Feature Left -->
+            <div id="left-container-feature1" class="flex flex-col flex-1">
+                <div
+                    class="border lg:p-3 p-2 lg:px-4 px-3 w-fit text-orange-600 rounded-full border-orange-600 bg-orange-300 lg:-translate-x-8 lg:-translate-y-20  -translate-x-4 -translate-y-10">
+                    <i class="fa-solid fa-rocket text-xl"></i>
+                </div>
+
+                <!-- Left Content -->
+
+                <div class="flex flex-col h-80 overflow-auto custom-scrollbar2 gap-5 text-white">
+                    <div class="flex flex-col gap-2 text-green-500">
+                        <div class="border rounded-full w-fit py-4 px-5 bg-gray-900 "><i class="fa-solid fa-book"></i>
+                        </div>
+                        <span class="font-inter font-bold text-lg">Apply: Build, Create, Play</span>
+                        <p class="text-gray-600 font-semibold max-w-80">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Cupiditate,
+                            commodi.</p>
+                    </div>
+
+                    <div class="max-w-80">
+                        <hr>
+                    </div>
+
+
+                    <div class="flex flex-col gap-2 text-indigo-500">
+                        <div class="border rounded-full w-fit py-4 px-5 bg-gray-900 "><i
+                                class="fa-solid fa-bookmark"></i>
+                        </div>
+                        <span class="font-inter font-bold text-lg">Apply: Build, Create, Play</span>
+                        <p class="text-gray-600 font-semibold max-w-96">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Cupiditate,
+                            commodi.</p>
+
+                    </div>
+
+                    <div class="max-w-80">
+                        <hr>
+                    </div>
+
+
+                    <div class="flex flex-col gap-2 text-orange-500">
+                        <div class="border rounded-full w-fit py-4 px-5 bg-gray-900 "><i
+                                class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <span class="font-inter font-bold text-lg">Apply: Build, Create, Play</span>
+                        <p class="text-gray-600 font-semibold max-w-96">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit.
+                            Cupiditate,
+                            commodi.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div></div>
+
+            </div>
+
+
+            <!-- Feature Right -->
+            <div id="right-container-feature1" class="flex flex-col mt-20 flex-1 justify-center font-inter gap-5">
+
+                <span class=" font-semibold text-green-400 ">Why We'are You?</span>
+                <span class="text-white font-extrabold text-3xl">Best Coding Learning Choice</span>
+                <span class="text-white">Choose us for unparallel experience</span>
+
+                <button class="text-white bg-indigo-400 p-6 rounded-2xl lg:mt-10 w-fit">Let's Connect</button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Testimonials -->
+
+        <div id="testimonials"
+            class="lg:mt-20 mt-10 xl:mx-40 max-xl:mx-10 flex-col flex lg:p-12 p-6 hover:border max-2xl:border border-blue-400 max-sm:border-none rounded-3xl">
+            <!-- Logo Top Right Corner -->
+
+            <div class="flex flex-col items-end lg:-translate-y-20 -translate-y-10 ">
+                <div
+                    class=" lg:p-3 p-2 lg:px-4 px-3 w-fit  text-blue-500 rounded-full border flex gap-4  border-blue-900 bg-blue-300">
+                    <i class="fa-solid fa-user-plus text-xl"></i>
+                    <span class="font-bold font-inter flex items-center ">Public Cheers For Us</span>
+                </div>
+            </div>
+
+
+            <!-- testimonial content -->
+
+            <div class="grid grid-cols-3 max-md:flex flex-col flex-wrap gap-5">
+
+                <!-- container 1-->
+                <div id="testimonial-pp-container"
+                    class=" bg-gray-800 sm:bg-opacity-30 lg:border rounded-3xl flex flex-col p-6 gap-6 row-start-1  font-inter row-end-3">
+                    <div class="flex flex-row">
+                        <div class="flex lg:flex-row flex-col flex-1 gap-5">
+                            <div class="border rounded-full overflow-hidden w-fit shrink-0"><img
+                                    src="./assets/asset 36.jpeg">
+                            </div>
+                            <div class="flex flex-col text-white">
+                                <span class="font-semibold"> Ashu</span>
+                                <span>@ashutosh1</span>
+                            </div>
+                        </div>
+                        <div
+                            class="text-white flex flex-row flex-1 lg:items-center sm:justify-end justify-end text-3xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-1 text-white">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, illo.</p>
+
+                    </div>
+                </div>
+
+                <div id="testimonial-pp-container"
+                    class=" bg-gray-800 sm:bg-opacity-30 lg:border rounded-3xl flex flex-col p-6 gap-6 row-start-1  font-inter row-end-4">
+                    <div class="flex flex-row">
+                        <div class="flex lg:flex-row flex-col flex-1 gap-5">
+                            <div class="border rounded-full overflow-hidden w-fit shrink-0"><img
+                                    src="./assets/asset 36.jpeg">
+                            </div>
+                            <div class="flex flex-col text-white">
+                                <span class="font-semibold"> Ashu</span>
+                                <span>@ashutosh1</span>
+                            </div>
+                        </div>
+                        <div
+                            class="text-white flex flex-row flex-1 lg:items-center sm:justify-end justify-end text-3xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-1 text-white">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, odit. Suscipit id quis quos
+                            ullam earum similique, dignissimos nemo quod.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div id="testimonial-pp-container"
+                    class=" bg-gray-800 sm:bg-opacity-30 lg:border rounded-3xl flex flex-col p-6 gap-6 row-start-1  font-inter row-end-3">
+                    <div class="flex flex-row">
+                        <div class="flex lg:flex-row flex-col flex-1 gap-5">
+                            <div class="border rounded-full overflow-hidden w-fit shrink-0"><img
+                                    src="./assets/asset 36.jpeg">
+                            </div>
+                            <div class="flex flex-col text-white">
+                                <span class="font-semibold"> Ashu</span>
+                                <span>@ashutosh1</span>
+                            </div>
+                        </div>
+                        <div
+                            class="text-white flex flex-row flex-1 lg:items-center sm:justify-end justify-end text-3xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-1 text-white">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, illo.</p>
+
+                    </div>
+                </div>
+
+                <div id="testimonial-pp-container"
+                    class=" bg-gray-800 sm:bg-opacity-30  lg:border rounded-3xl sm:flex hidden flex-col p-6 gap-6 row-start-3  font-inter row-end-6">
+                    <div class="flex flex-row">
+                        <div class="flex lg:flex-row flex-col flex-1 gap-5">
+                            <div class="border rounded-full overflow-hidden w-fit shrink-0"><img
+                                    src="./assets/asset 36.jpeg">
+                            </div>
+                            <div class="flex flex-col text-white">
+                                <span class="font-semibold"> Ashu</span>
+                                <span>@ashutosh1</span>
+                            </div>
+                        </div>
+                        <div
+                            class="text-white flex flex-row flex-1 lg:items-center sm:justify-end justify-end text-3xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-1 text-white">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, illo.</p>
+
+                    </div>
+                </div>
+
+                <div id="testimonial-pp-container"
+                    class=" bg-gray-800 sm:bg-opacity-30  lg:border rounded-3xl md:flex hidden flex-col p-6 gap-6 row-start-4  font-inter row-end-8">
+                    <div class="flex flex-row">
+                        <div class="flex lg:flex-row flex-col flex-1 gap-5">
+                            <div class="border rounded-full overflow-hidden w-fit shrink-0"><img
+                                    src="./assets/asset 36.jpeg">
+                            </div>
+                            <div class="flex flex-col text-white">
+                                <span class="font-semibold"> Ashu</span>
+                                <span>@ashutosh1</span>
+                            </div>
+                        </div>
+                        <div
+                            class="text-white flex flex-row flex-1 lg:items-center sm:justify-end justify-end text-3xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-1 text-white">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, illo.</p>
+
+                    </div>
+                </div>
+
+                <div id="testimonial-pp-container"
+                    class=" bg-gray-800 sm:bg-opacity-30  lg:border rounded-3xl md:flex hidden flex-col p-6 gap-6 row-start-3  font-inter row-end-7">
+                    <div class="flex flex-row">
+                        <div class="flex lg:flex-row flex-col flex-1 gap-5">
+                            <div class="border rounded-full overflow-hidden w-fit shrink-0"><img
+                                    src="./assets/asset 36.jpeg">
+                            </div>
+                            <div class="flex flex-col text-white">
+                                <span class="font-semibold"> Ashu</span>
+                                <span>@ashutosh1</span>
+                            </div>
+                        </div>
+                        <div
+                            class="text-white flex flex-row flex-1 lg:items-center sm:justify-end justify-end text-3xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-1 text-white">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, illo.</p>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <footer class="mt-20">
+
+        <div id="link-section" class="mx-20 flex flex-row flex-wrap">
+            <div id="link-1" class="flex flex-col flex-1 items-center justify-center  p-8">
+                <a href="#">
+                    <div class="flex border text-3xl rounded-full p-6 text-purple-500"><i
+                            class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="text-xl text-purple-500"><i class="fa-solid fa-link"></i></div>
+                        <a href="#" class="text-white text-2xl font-bold mx-2">Instagram</a>
+                    </div>
+                </a>
+
+
+            </div>
+
+
+            <div id="link-2" class="flex flex-col flex-1 items-center justify-center  p-8">
+                <a href="#">
+                    <div class="flex border text-3xl rounded-full p-6 text-blue-500"><i
+                            class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="text-xl text-blue-500"><i class="fa-solid fa-link"></i></div>
+                        <a href="#" class="text-white text-2xl font-bold mx-2">LinkedIn</a>
+                    </div>
+                </a>
+
+
+            </div>
+
+
+            <div id="link-3" class="flex flex-col flex-1 items-center justify-center  p-8">
+                <a href="#">
+                    <div class="flex border text-3xl rounded-full p-6 text-gray-500"><i
+                            class="fa-brands fa-telegram"></i>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="text-xl text-gray-500"><i class="fa-solid fa-link"></i></div>
+                        <a href="#" class="text-white text-2xl font-bold mx-2">Telegram</a>
+                    </div>
+                </a>
+
+
+            </div>
+
+            <div id="link-4" class="flex flex-col flex-1 items-center justify-center  p-8">
+                <a href="#">
+                    <div class="flex border text-3xl rounded-full p-6 text-blue-400"><i
+                            class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="flex flex-row items-center">
+                        <div class="text-xl text-blue-400"><i class="fa-solid fa-link"></i></div>
+                        <a href="#" class="text-white text-2xl font-bold mx-2">Facebook</a>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="flex flex-row items-center justify-center p-20">
+            <span class="text-white">
+                <a href="https://www.instagram.com/ashutos.h1/">❤️Made by @Ashutos.h1</a>
+            </span>
+        </div>
+
+
+    </footer>
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
